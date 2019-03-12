@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FluentInterfaces.cs" />
+    <Compile Include="IContentPropertyMapper.cs" />
+    <Compile Include="ContentPropertyMapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

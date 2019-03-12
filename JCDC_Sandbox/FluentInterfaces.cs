@@ -18,9 +18,10 @@ namespace JCDC_Sandbox
             };
 
             EmployeeFluentInterface fluentEmployee = new EmployeeFluentInterface();
-            var employeeFluent = fluentEmployee.NameOfEmployee("Jason")
-                .DateOfBirth("9/4/1971")
-                .PlaceOfBirth("Tacoma");
+            fluentEmployee.CreateEmployee("Jason")
+                .BornOn("9/4/1971")
+                .HomeTown("Tacoma");
+            Employee newEmployee = fluentEmployee.GetEmployee;
         }
     }
 
@@ -33,21 +34,22 @@ namespace JCDC_Sandbox
 
     class EmployeeFluentInterface
     {
+        public Employee GetEmployee { get { return employee; } }
         private Employee employee = new Employee();
 
-        public EmployeeFluentInterface NameOfEmployee(string name)
+        public EmployeeFluentInterface CreateEmployee(string name)
         {
             employee.NameOfEmployee = name;
             return this;
         }
 
-        public EmployeeFluentInterface DateOfBirth(string dob)
+        public EmployeeFluentInterface BornOn(string dob)
         {
             employee.DateOfBirth = dob;
             return this;
         }
 
-        public EmployeeFluentInterface PlaceOfBirth(string homeTown)
+        public EmployeeFluentInterface HomeTown(string homeTown)
         {
             employee.PlaceOfBirth = homeTown;
             return this;
