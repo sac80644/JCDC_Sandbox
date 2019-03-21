@@ -21,7 +21,10 @@ namespace JCDC_Sandbox
             //Console.WriteLine(total);
             //Console.WriteLine(count);
 
-            var mapper = new ContentPropertyMapper();
+            //var mapper = new ContentPropertyMapper();
+
+            var client = new HttpClient();
+            var content = client.GetContent();
         }
 
 
