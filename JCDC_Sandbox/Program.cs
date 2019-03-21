@@ -23,8 +23,8 @@ namespace JCDC_Sandbox
 
             //var mapper = new ContentPropertyMapper();
 
-            var client = new HttpClient();
-            var content = client.GetContent();
+            Delegates d = new Delegates();
+            d.CreateAndPassSomeDelegate();
         }
 
 
