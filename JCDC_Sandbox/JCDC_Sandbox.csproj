@@ -49,6 +49,9 @@
     <Compile Include="IContentPropertyMapper.cs" />
     <Compile Include="ContentPropertyMapper.cs" />
     <Compile Include="IHttpClient.cs" />
+    <Compile Include="PluralsightAnonymousMethods.cs" />
+    <Compile Include="PluralSightDelegatesAndEvents.cs" />
+    <Compile Include="PluralSightLambdas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

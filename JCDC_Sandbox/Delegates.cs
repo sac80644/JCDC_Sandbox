@@ -78,4 +78,37 @@ namespace JCDC_Sandbox
             System.Console.WriteLine(k);
         }
     }
+
+    class PluralSightDelegates
+    {
+        //Delegate
+        public delegate void WorkPerformedHandler(int hours, object workType);
+
+        //Delegate Instance
+        public PluralSightDelegates()
+        {
+            WorkPerformedHandler del1 = new WorkPerformedHandler(WorkPerformed1);
+
+            del1(5, new object());
+
+            //adding to the invocation list - note that this is the same as above using the new constructor
+            WorkPerformedHandler del2 = WorkPerformed2;
+            del1 += del2;
+
+            del2(10, new object());
+            del1(10, new object());
+        }
+
+        // Handler
+        static void WorkPerformed1(int hours, object workType)
+        {
+            Console.WriteLine("WorkPerformed1 called");
+        }
+        // Handler
+        static void WorkPerformed2(int hours, object workType)
+        {
+            Console.WriteLine("WorkPerformed2 called");
+        }
+
+    }
 }
