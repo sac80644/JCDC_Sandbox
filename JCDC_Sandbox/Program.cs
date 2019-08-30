@@ -10,10 +10,12 @@ namespace JCDC_Sandbox
     {
         static void Main(string[] args)
         {
-            var foo = "blah";
-            var single = Singleton.Instance;
-            return;
+            var foo = new AsyncTests();
+            foo.AsyncMethod();
 
+            Console.WriteLine("done");
+            Console.ReadKey();
+            return;
 
             PluralSightWorkerFirstDraft p1 = new PluralSightWorkerFirstDraft();
             p1.DoWork(5, new object());  //if I do this I have not wired up the event handler methods. use the client to do so
